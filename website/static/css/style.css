@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+:root {
+  --bg-color: #fdfdfd;
+  --text-color: #333;
+  --main-color: #754ef9;
+  --white-color: #fdfdfd;
+  --shadow-color: rgba(0, 0, 0, .2);
+
+}
+
+html{
+  font-size: 62.5%;
+  overflow: hidden;
+}
+body {
+  /*background: var(--bg-color); */
+  color: var(--text-color);
+  background: url('../images/back.jpeg');
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 7%;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+}
+.logo {
+  font-size: 15px;
+  color: var(--main-color);
+  font-weight: 100;
+  cursor: default;
+  margin-right: auto;
+  bottom: 0;
+}
+
+.navbar a {
+  position: relative;
+  font-size: 1.7rem;
+  color: var(--white-color);
+  font-weight: 500;
+  margin-right: 3.5rem;
+}
+.navbar a.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: .2rem;
+  background: var(--white-color);
+}
+.search {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+#signup-button {
+  background-color: gray; /* gray */
+  color: #fff; /* white */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  justify-items: end;
+}
+.hero {
+  text-align: left;
+  padding: 100px;
+  background-image: url('../images/hero.jpg');
+  background-size: cover;
+  background-position: left;
+  justify-items: left;
+  align-items: left;
+  width: 100%;
+  height: 100vh;
+}
+.hero h1, .hero p {
+  margin-bottom: 20px;
+  color: white;
+}
+.hero p {
+  color: white;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  justify-content: left;
+  align-items: left;
+}

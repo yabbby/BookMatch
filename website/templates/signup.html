@@ -1,0 +1,28 @@
+<!--This is the signup page-->
+{% extend "layout.html"%}
+{% block body %}
+
+<h1>Sign Up</h1>
+<p>Sign up to Book-Match and find your perfect book match.</p>
+
+<form action="{{ url_for('signup') }}" method="post"></form>
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" required>
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" required>
+  <button type="submit">Sign Up</button>
+</form>
+
+<p>Already have an account? <a href="{{ url_for('login') }}">Log in</a></p>
+{% endblock %}
+<!-- In this snippet, the signup.html file is a template for the signup page. -->
+<!-- The file extends the layout.html file and defines a block named body. -->
+<!-- The body block contains the signup form, which has fields for the username and password. -->
+<!-- The form action is set to the signup route, and the method is set to post. -->
+<!-- The form also includes a link to the login page for users who already have an account. -->
+<!-- The signup.html file is used to render the signup page in the web application. -->
+<!-- The signup page allows users to create a new account by entering a username and password. -->
+<!-- The form data is sent to the signup route for processing. -->
+<!-- The signup page is accessible to users who are not logged in. -->
+<!-- The signup page is part of the authentication flow in the web application. -->
+ 
