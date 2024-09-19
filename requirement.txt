@@ -1,0 +1,6 @@
+Flask 
+Flask SQLalchemy
+Sqlite
+html
+css
+javascript

@@ -1,34 +1,456 @@
 <!--This a html file for the home page.-->
 {% extends "layout.html" %}
 {% block body %}
-<header class="header">
-  <a href="#" class="logo"><img src="{{ url_for('static', filename='images/logo.png')}}",  width="100", alt="website-logo">
-    <h1>Book-Match.</h1>
-  </a>
-  <nav class="navbar">
-<div class="search">
-    <input type="text" placeholder="Search..." aria-label="Search">
+ <!--------- header section start ------------>
+    <header class="header">
+
+       <div class="header-1">
+         <a href="#" class="logo"><img src="{{ url_for('static', filename='images/logo.png')}}",  width="100", alt="website-logo">BookMatch.</a>
+             <!--   
+                <form action="" class="search-form">
+                <input type="search" name="" placeholder="search here..." id="search-box">
+               
+            </form>
+          -->
+
+            <div class="icons">
+              
+                <div id="search-btn" class="fas fa-search"></div>
+                <a href="/category" class="fas fa-search"></a>
+                <a href="/category" class='bx bx-category'></a>
+            <a href="/auth/login">
+                <div id="login-btn"   class="fas fa-user"></div>
+            </a>
+            </div>
+
+        </div>
+
+        <div class="header-2">
+
+            <div class="navbar">
+                <a class="nav-item nav-link" id="home" href="/">Home</a>
+                <a class="nav-item nav-link" id="about" href="/about">About Us</a>
+                <a href="#featured">featured</a>
+                <a class="nav-item nav-link" id="category" href="/category">Categories</a>
+                <a class="nav-item nav-link" id="review" href="/review">Reviews</a>
+                <a class="nav-item nav-link" id="blogs" href="/blogs">Blogs</a>
+              
+            </div>
+
+        </div>
+
+    </header>
+ 
+<!--end of Header section-->
+<!--Bottom navbar-->
+<div class="bottom-navbar">
+    <a href="/"><i class="fas fa-home"></i></a>
+    <a href="/about"><i class="fas fa-info-circle"></i></a>
+    <a href="/category"><i class="fas fa-book"></i></a>
+    <a href="/review"><i class="fas fa-star"></i></a>
+    <a href="/blogs"><i class="fas fa-users"></i></a>
+  
 </div>
-    
-      <a class="nav-item nav-link" id="home" href="/">Home</a>
-      <a class="nav-item nav-link" id="about" href="/about">About Us</a>
-      <a class= "nav-item nav-link" id="cart" href="/cart">Cart</a>
-      <a class="nav-item nav-link" id="category" href="/category">Categories</a>
-      <a class="nav-item nav-link" id="review" href="/review">Reviews</a>
-      <a class="nav-item nav-link" id="community" href="/community">Community</a>
-  </nav> 
-  <button type="submit" id="signup-button">Sign Up
-    <a class="nav-item nav-link" id="signup" href="/signup"></a>
-  </button>
-</header>
-<main>
-  <div class="hero">
-    <h1>Welcome to Book-Match</h1>
-    <p>Find your perfect book match here.</p>
-    <img src="{{ url_for('static', filename='images/main.jpg') }}" alt="hero-image">
+<!--bottom navbar start-->
+<div class="bottom-navbar"></div>
+    <a href="/"><i class="fas fa-home"></i></a>
+    <a href="/about"><i class="fas fa-info-circle"></i></a>
+    <a href="/category"><i class="fas fa-book"></i></a>
+    <a href="/review"><i class="fas fa-star"></i></a>
+    <a href="/blogs"><i class="fas fa-users"></i></a>
+  
+</div>
+<!--end of bottom navbar-->
+<!--Home section start-->
+<section class="home" id="home">
+  <div class="row">
+    <div class="content">
+      <h1>Find your next book here</h1>
+      <p>Discover the best books from a wide range of categories</p>
+      <a href="/category" class="btn">explore</a>
     </div>
-</main>
+    <div class="swiper books-list">
+      <div class="swiper-wrapper">
+        
+         <a href="" class="swiper-slide"><img src="{{ url_for('static', filename='images/book-1.png')}}" alt=""></a> 
+         <a href="" class="swiper-slide"><img src="{{ url_for('static', filename='images/book-2.png')}}" alt=""></a>
+         <a href="" class="swiper-slide"><img src="{{ url_for('static', filename='images/book-3.png')}}" alt=""></a>
+         <a href="" class="swiper-slide"><img src="{{ url_for('static', filename='images/book-4.png')}}" alt=""></a>
+         <a href="" class="swiper-slide"><img src="{{ url_for('static', filename='images/book-5.png')}}" alt=""></a>
+         <a href="" class="swiper-slide"><img src="{{ url_for('static', filename='images/book-6.png')}}" alt=""></a>
+         <a href="" class="swiper-slide"><img src="{{ url_for('static', filename='images/book-7.png')}}" alt=""></a>
+         <a href="" class="swiper-slide"><img src="{{ url_for('static', filename='images/book-8.png')}}" alt=""> </a>
+         <a href="" class="swiper-slide"><img src="{{ url_for('static', filename='images/book-9.png')}}" alt=""></a>
+         <a href="" class="swiper-slide"><img src="{{ url_for('static', filename='images/book-10.png')}}" alt=""></a>
+       
+      </div>
+      <img src="{{ url_for('static', filename='images/stand.png')}}" class="stand" alt="">
+    </div>
+  </div>
+</section>
+<!--end of Home section-->
+<!--Icons section start-->
+<section class="icons-container">
+  <div class="icons">
+    <i class="fas fa-envelope"></i>
+    <h3>Fast Delivery</h3>
+    <p>Get your books delivered at your doorstep</p>
+  </div>
+  <div class="icons">
+    <i class="fas fa-dollar-sign"></i>
+    <h3>Best Price</h3>
+    <p>Get the best price for your books</p>
+    </div>
+  <div class="icons">
+    <i class="fas fa-headphones"></i>
+    <h3>24/7 Support</h3>
+    <p>Get 24/7 support for your queries</p>
+  </div>
+  <div class="icons">
+    <i class="fas fa-award"></i>
+    <h3>Best Quality</h3>
+    <p>Get the best quality books</p>
+</section>
+<!--end of Icons section-->
+<!--Featured section start-->
+<section class="featured" id="featured">
+  <div class="featured" id="featured">
+    <div class="heading"><span>Featured Books</span></div>
+    <div class="swiper featured-slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide box">
+          <div class="icons">
+            <a href="" class="fas fa-search"></a>
+            <a href="" class="fas fa-heart"></a>
+            <a href="" class="fas fa-eye"></a>
+            <a href="" class="fas fa-bookmark"></a>
+          </div>
+          <img src="{{ url_for('static', filename='images/book-1.png')}}" alt="">
+          <div class="content">
+            <h3>Book Name</h3>
+            <p>Author Name</p>
+            <div class="rating">*****</div>
+            <div class="price">$20 <span>$25.99</span></div>
+            <a href="/category" class="btn">add to cart</a>
+        </div>
+      </div>
+              <div class="swiper-slide box">
+          <div class="icons">
+            <a href="" class="fas fa-search"></a>
+            <a href="" class="fas fa-heart"></a>
+            <a href="" class="fas fa-eye"></a>
+            <a href="" class="fas fa-bookmark"></a>
+          </div>
+          <img src="{{ url_for('static', filename='images/book-2.png')}}" alt="">
+          <div class="content">
+            <h3>Book Name</h3>
+            <p>Author Name</p>
+            <div class="rating">*****</div>
+            <div class="price">$20 <span>$25.99</span></div>
+            <a href="/category" class="btn">add to cart</a>
+        </div>
+      </div> 
+              <div class="swiper-slide box">
+          <div class="icons">
+            <a href="" class="fas fa-search"></a>
+            <a href="" class="fas fa-heart"></a>
+            <a href="" class="fas fa-eye"></a>
+            <a href="" class="fas fa-bookmark"></a>
+          </div>
+          <img src="{{ url_for('static', filename='images/book-3.png')}}" alt="">
+          <div class="content">
+            <h3>Book Name</h3>
+            <p>Author Name</p>
+            <div class="rating">*****</div>
+            <div class="price">$20 <span>$25.99</span></div>
+            <a href="/category" class="btn">add to cart</a>
+        </div>
+      </div>  
+              <div class="swiper-slide box">
+          <div class="icons">
+            <a href="" class="fas fa-search"></a>
+            <a href="" class="fas fa-heart"></a>
+            <a href="" class="fas fa-eye"></a>
+            <a href="" class="fas fa-bookmark"></a>
+          </div>
+          <img src="{{ url_for('static', filename='images/book-4.png')}}" alt="">
+          <div class="content">
+            <h3>Book Name</h3>
+            <p>Author Name</p>
+            <div class="rating">*****</div>
+            <div class="price">$20 <span>$25.99</span></div>
+            <a href="/category" class="btn">add to cart</a>
+        </div>
+      </div>   
+              <div class="swiper-slide box">
+          <div class="icons">
+            <a href="" class="fas fa-search"></a>
+            <a href="" class="fas fa-heart"></a>
+            <a href="" class="fas fa-eye"></a>
+            <a href="" class="fas fa-bookmark"></a>
+          </div>
+          <img src="{{ url_for('static', filename='images/book-5.png')}}" alt="">
+          <div class="content">
+            <h3>Book Name</h3>
+            <p>Author Name</p>
+            <div class="rating">*****</div>
+            <div class="price">$20 <span>$25.99</span></div>
+            <a href="/category" class="btn">add to cart</a>
+            
+        </div>
+      </div>         
+                            
+  </div>
+</section>
+<!--End of featured section-->
+<!--news letter section start-->
+
+<section class="newsletter">
+  <form action="">
+    <h3>Subscribe for latest update</h3>
+    <input type="email" placeholder="Enter your email" class="box">
+    <a href="/auth/login">
+    <input type="submit/login" value="subscribe" class="btn">
+    </a>
+
+  </form>
+</section>
+<!--end of news letter section-->
+
+<!--catagory section start-->
+<section class="categories" id="categories">
+  <div class="container">
+    <h1>Book Categories</h1>
+    <div class="categories">
+      <div class="category">
+        <h2>Fiction</h2>
+        <p>Explore imaginative narrative and storytelling</p>
+      </div>
+      <div class="category">
+        <h2>Non-Fiction</h2>
+        <p>Explore factual books and real events</p>
+    </div>
+    <div class="category">
+        <h2>Science</h2>
+        <p>Explore books on science and technology</p>
+  </div>
+  <div class="category">
+      <h2>History</h2>
+      <p>Explore books on historical events and figures</p>
+  </div>
+  <div class="category">
+      <h2>Biography</h2>
+      <p>Explore books on famous personalities</p>
+  </div>
+  <div class="category">
+      <h2>Self-Help</h2>
+      <p>Explore books on personal development</p>
+  </div>
+</section>
+<!--end of catagory-->
+<!--deal section start-->
+
+<section class="deal">
+  <div class="content">
+    <h2>Deal of the day</h2>
+    <p>Get the best deals on your favorite books</p>
+    <a href="/category" class="btn">shop now</a>
+  </div>
+  <div class="image">
+    <img src="{{ url_for('static', filename='images/deal.png')}}" alt="">
+</section>
 
 
+<!--end of deal section-->
+<!--review section start-->
+<section class="reviews" id="'reviews">
+  <h1 class="heading"><span>Client's reviews</span></h1>
+  <div class="swiper reviews-slider">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide box">
+        <img src="{{ url_for('static', filename='images/book-4.png')}}" alt="">
+        <h3>Johnny Deep</h3>
+         <p>
+          Author: Nate John
+        </p>
+        <p>
+          Title: MoonLove
+        </p>
+        <p>
+          This book is great and i suggest you to read it 
+        </p>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+      </div>
+    </div>
+  </div>
 
-{% endblock %}
+  <div class="swiper reviews-slider">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide box">
+        <img src="{{url_for('static', filename='images/book-5.png')}}" alt="">
+        <h3>J-Cole</h3>
+         <p>
+          Author: Nate John
+        </p>
+        <p>
+          Title: MoonLove
+        </p>
+        <p>
+          This book is great and i suggest you to read it 
+        </p>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+   
+  <div class="swiper reviews-slider">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide box">
+        <img src="{{url_for('static', filename='images/book-6.png')}}" alt="">
+        <h3>Abel Tesfaye</h3>
+        <p>
+          Author: Nate John
+        </p>
+        <p>
+          Title: MoonLove
+        </p>
+        <p>
+          This book is great and i suggest you to read it 
+        </p>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+   
+  <div class="swiper reviews-slider">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide box">
+        <img src="{{url_for('static', filename='images/book-7.png')}}" alt="">
+        <h3>Jessica Alba</h3>
+         <p>
+          Author: Nate John
+        </p>
+        <p>
+          Title: MoonLove
+        </p>
+        <p>
+          This book is great and i suggest you to read it 
+        </p>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+]
+<!--blog section-->
+         
+         <section class="blogs" id="blogs">
+
+            <div class="heading"><span>our blogs</span></div>
+
+            <div class="swiper blog-slider">
+
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide box">
+                        <div class="image">
+                           <img src="{{url_for('static', filename='images/blog-1.jpg')}}".alt="">
+                        </div>
+
+                        <div class="content">
+                            <h3>Whispers of the Lost Realm</h3>
+                            <p>
+                               In a world where magic and reality intertwine, "Whispers of the Lost Realm" follows the journey of Elara, a young scholar who discovers an ancient tome hidden within the dusty archives of her university. As she delves into its pages, she uncovers the secrets of a forgotten realm where mythical creatures roam and ancient prophecies await fulfillment. Driven by a thirst for knowledge and an insatiable curiosity, Elara finds herself transported to this enchanting world, where she must navigate treacherous landscapes, forge alliances with unexpected companions, and confront dark forces that threaten both her world and the lost realm. With themes of bravery, friendship, and self-discovery, this captivating tale invites readers to explore the power of imagination and the timeless struggle between light and darkness.
+                            </p>
+                            <a href="/blogs" class="btn">read more</a>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+         </section>
+ 
+<!--end of blog-->
+<!--footer section start-->
+<section class="footer">
+  <div class="box-container">
+    <div class="box">
+      <h3>Our locations</h3>
+      <a href=""><i class="fas fa-marker-alt"></i>Ethiopia</a>
+      <a href=""><i class="fas fa-marker-alt"></i>Africa</a>
+      <a href=""><i class="fas fa-marker-alt"></i>USA</a>
+      <a href=""><i class="fas fa-marker-alt"></i>Japan</a>
+      <a href=""><i class="fas fa-marker-alt"></i>China</a>
+    </div>
+    <div class="box">
+      <h3>Quick links</h3>
+      <a href="/"><i class="fas fa-arrow-right"></i>Home</a>
+      <a href="/about"><i class="fas fa-arrow-right"></i>About</a>
+      <a href="/category"><i class="fas fa-arrow-right"></i>Category</a>
+      <a href="/review"><i class="fas fa-arrow-right"></i>Review</a>
+      <a href="/blogs"><i class="fas fa-arrow-right"></i>Blogs</a>
+     
+    </div>
+    <div class="box">
+      <h3>Categories</h3>
+      <a href="/category"><i class="fas fa-arrow-right"></i>Fiction</a>
+      <a href="/category"><i class="fas fa-arrow-right"></i>Non-Fiction</a>
+      <a href="/category"><i class="fas fa-arrow-right"></i>Science</a>
+      <a href="/category"><i class="fas fa-arrow-right"></i>History</a>
+      <a href="/category"><i class="fas fa-arrow-right"></i>Biography</a>
+      <a href="/category"><i class="fas fa-arrow-right"></i>Self-Help</a>
+    </div>
+    <div class="box">
+      <h3>extra links</h3>
+      <a href=""><i class="fas fa-arrow-right"></i>account info</a>
+      <a href="/category"><i class="fas fa-arrow-right"></i>order items</a>
+      <a href=""><i class="fas fa-arrow-right"></i>privacy policy</a>
+      <a href="/about"><i class="fas fa-arrow-right"></i>terms of service</a>
+    </div>
+    <div class="box">
+      <h3>contact info</h3>
+      <a href=""><i class="fas fa-phone"></i>+251-968489568</a>
+      <a href=""><i class="fas fa-phone"></i>+251-985353099</a>
+      <a href="mailto:ye.aba.net@gmail.com"><i class="fas fa-envelope"></i> ye.aba.net@gmail.com</a>
+      <a href="mailto:yeabsiraabinet23@gmail.com"><i class="fas fa-envelope"></i> yeabsiraabinet23@gmail.com</a> 
+      <img src="{{url_for('static', filename='images/worldmap.png')}}" alt="" class="map">
+    </div>
+    <div class="box">
+      <h3>follow us</h3>
+      <a href="https://www.facebook.com/yeabsira.abinet.3/"><i class="fab fa-facebook"></i>facebook</a>
+      <a href="https://x.com/YabbyAK"><i class="fab fa-twitter"></i>twitter</a>
+      <a href="https://www.instagram.com/ye_aba_net/"><i class="fab fa-instagram"></i>instagram</a>
+      <a href="https://www.linkedin.com/in/yeabsira-terefe-499034256/"><i class="fab fa-linkedin"></i>linkedin</a>
+      <a href="https://www.youtube.com/@TheInsightfulJourney23"><i class="fab fa-youtube"></i>youtube</a>
+    </div>
+    
+  <div class="credit">Created by <span>Yeabsira Terefe</span> | all rights reserved</div>
+</section>
+<!--end of footer section-->
+<!--end of home-->
+{% endblock %}>

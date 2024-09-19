@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<h1>You have successfully registered!</h1>
+<p>Welcome! You can now log in to your account.</p>
+
+<div>
+    <a href="{{ url_for('auth.login') }}" class="btn btn-primary">Log In</a>
+    <a href="{{ url_for('views.home') }}" class="btn btn-secondary">Home</a>
+</div>
+
+{% endblock %}

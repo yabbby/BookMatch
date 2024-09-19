@@ -1,30 +1,23 @@
-<!--This is the login page-->
+<!-- This is the login page -->
 {% extends "layout.html" %}
 {% block body %}
 
-<h1>Login</h1>
-<p>Log in to Book-Match and find your perfect book match.</p>
-
-<form action="{{ url_for('login') }}" method="post">
-
-</form>
-  <label for="username">Username:</label>
-  <input type="text" id="username" name="username" required>
-  <label for="password">Password:</label>
-  <input type="password" id="password" name="password" required>
-  <button type="submit">Login</button>
-
-</form>
-
-<p>Don't have an account? <a href="{{ url_for('signup') }}">Sign up</a></p>
-
+<body class="kk-body">
+    <div class="kk-login-container">
+   
+        <h1 class="kk-title" style="color: black;">BookMatch</h1>
+        <form method="POST" action="{{ url_for('auth.login') }}">
+            <input type="name" class="kk-input" name="name" placeholder="Name" required> 
+            <input type="email" class="kk-input" name="email" placeholder="Email" required style="text-transform: lowercase;">
+            <input type="password" class="kk-input" name="password" placeholder="Password" required>
+            <button type="submit" class="kk-button">Login</button>
+        </form>
+        <div class="kk-register">
+            <p>Don't have an account? <a href="{{ url_for('auth.sign_up') }}">Register here</a></p>
+        </div>
+        <div class="kk-footer">
+            <p>&copy; 2024 BookMatch</p>
+        </div>
+    </div>
+</body>
 {% endblock %}
-<!-- <!-- In this snippet, the login.html file is a template for the login page. --> -->
-
-<!-- <!-- The file extends the layout.html file and defines a block named body. --> -->
-<!-- <!-- The body block contains the login form, which has fields for the username and password. --> -->
-<!-- <!-- The form action is set to the login route, and the method is set to post. --> -->
-<!-- <!-- The form also includes a link to the signup page for users who do not have an account. --> -->
-<!-- <!-- The login.html file is used to render the login page in the web application. --> -->
-<!-- <!-- The login page allows users to log in to their account by entering their username and password. --> -->
-  

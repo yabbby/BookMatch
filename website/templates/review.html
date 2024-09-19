@@ -1,0 +1,170 @@
+<!-- This a html file for the book review page. -->
+{% extends "layout.html" %}
+{% block body %}
+
+    <div class="review-container">
+        <h1>Book Reviews</h1>
+        </div>
+<!--from back end-->
+ <div class="review-box">
+    {% if reviews %}
+        <ul>
+            {% for review in reviews %}
+                
+                   
+                    <h2>{{ review.title }}</h2>
+                    <p>Author: {{ review.author }}</p>
+                    <p>Reviewer: {{ review.reviewer }}</p>
+                    <p>Rating: {{ review.rating }}</p>
+                    <p>Review: {{ review.review }}</p>
+                    
+                    <div>
+                    <input type="hidden" name="review_id" value="{{ review.id }}">
+                    
+                    </div>
+                    {% if review.image %}
+                        <img src="{{ review.image }}" alt="{{ review.title }}">
+                    {% endif %}
+                
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No reviews found.</p>
+    {% endif %}
+    </div>
+<!--end of backend--> 
+<div class="review-box">
+        
+
+        <!-- Example Review Item -->
+        <div class="review-item">
+            <div style="display: flex; align-items: center;">
+              <img src="{{ url_for('static', filename='images/book-1.png')}}" alt="Book Cover">
+                <div>
+                    <h2>Book Title</h2>
+                    <p><strong>Author:</strong> Author Name</p>
+                    <p><strong>Reviewer:</strong></p>
+                    <p><strong>Rating:</strong> ★★★★☆</p>
+                    <p><strong>Review:</strong> This is an example of a book review. It gives insights about the book.</p>
+                </div>
+            </div>
+        </div>
+        <!-- End of Review Item -->
+
+        <!-- Repeat review items as needed -->
+
+      
+    </div>
+       <div class="review-box">
+      
+
+        <!-- Example Review Item -->
+        <div class="review-item">
+            <div style="display: flex; align-items: center;">
+              <img src="{{ url_for('static', filename='images/book-2.png')}}" alt="Book Cover">
+                <div>
+                    <h2>Book Title</h2>
+                    <p><strong>Author:</strong> Author Name</p>
+                    <p><strong>Reviewer:</strong></p>
+                    <p><strong>Rating:</strong> ★★★★☆</p>
+                    <p><strong>Review:</strong> This is an example of a book review. It gives insights about the book.</p>
+                </div>
+            </div>
+        </div>
+        <!-- End of Review Item -->
+
+        <!-- Repeat review items as needed -->
+
+      
+    </div>
+       <div class="review-box">
+        
+
+        <!-- Example Review Item -->
+        <div class="review-item">
+            <div style="display: flex; align-items: center;">
+              <img src="{{ url_for('static', filename='images/book-3.png')}}" alt="Book Cover">
+                <div>
+                    <h2>Book Title</h2>
+                    <p><strong>Author:</strong> Author Name</p>
+                    <p><strong>Reviewer:</strong></p>
+                    <p><strong>Rating:</strong> ★★★★☆</p>
+                    <p><strong>Review:</strong> This is an example of a book review. It gives insights about the book.</p>
+                </div>
+            </div>
+        </div>
+        <!-- End of Review Item -->
+
+        <!-- Repeat review items as needed -->
+
+      
+    </div>
+       <div class="review-box">
+       
+
+        <!-- Example Review Item -->
+        <div class="review-item">
+            <div style="display: flex; align-items: center;">
+              <img src="{{ url_for('static', filename='images/book-4.png')}}" alt="Book Cover">
+                <div>
+                    <h2>Book Title</h2>
+                    <p><strong>Author:</strong> John doe</p>
+                    <p><strong>Reviewer:</strong></p>
+                    <p><strong>Rating:</strong> ★★★★☆</p>
+                    <p><strong>Review:</strong> This is an example of a book review. It gives insights about the book.</p>
+                </div>
+            </div>
+        </div>
+        <!-- End of Review Item -->
+
+        
+
+      
+    </div>
+    <!--to give review-->
+<body class="book-review-body">
+    <div class="book-review-container">
+        <h1>Submit a Book Review</h1>
+        <form method="POST" action="/review">
+            <div class="book-review-group">
+                <label for="title">Book Title:</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+
+            <div class="book-review-group">
+                <label for="reviewer">Reviewer:</label>
+                <input type="text" id="reviewer" name="reviewer" required>
+            </div>
+
+            <div class="book-review-group">
+                <label for="author">Author:</label>
+                <input type="text" id="author" name="author" required>
+            </div>
+
+            <div class="book-review-group">
+                <label for="image">Book Image Link:</label>
+                <input type="url" id="image" name="image" placeholder="Enter image URL" required>
+            </div>
+
+            <div class="book-review-group">
+                <label for="rating">Rating (1-5):</label>
+                <input type="number" id="rating" name="rating" min="1" max="5" required>
+            </div>
+
+            <div class="book-review-group">
+                <label for="review">Put Review:</label>
+                <textarea id="review" name="review" required rows="5"></textarea>
+            </div>
+
+            <div class="book-review-submit">
+                <input type="submit" value="Send">
+            </div>
+        </form>
+    </div>
+
+    <footer class="AK-Cat-footer-main">
+        <p>&copy; 2024 BookMatch. All rights reserved.</p>
+    </footer>
+</body>
+
+{% endblock %}
