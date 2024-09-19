@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block body %}
+<!-- Contact Us Page HTML -->
+<body class="kk-body">
+<div class="kk-login-container">
+<form method="POST" action="/contact">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Name" autocomplete="off" autofocus required><br><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Email" autocomplete="off" required><br><br>
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" placeholder="put your comment here!!"></textarea><br><br>
+    <input type="submit" value="Send">
+</form>
+</div>
+</body>
+<!-- End Contact Us Page HTML -->
+
+
+{% endblock %}

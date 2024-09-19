@@ -1,5 +1,99 @@
 <!-- This is a html file for the catagories of the book-->
 {% extends "layout.html" %}
 {% block body %}
-<h1>Categories</h1>
+<body class="AK-Cat">
+
+<header class="AK-Cat-header-main">
+    <h1>BookMatch</h1>
+</header>
+
+<div class="AK-Cat-search-input-container">
+    <input type="text" placeholder="Search for books...">
+</div>
+
+<nav class="AK-Cat-menu">
+    <a href="#" class="AK-Cat-menu-item">Fiction</a>
+    <a href="#" class="AK-Cat-menu-item">Non-Fiction</a>
+    <a href="#" class="AK-Cat-menu-item">Science</a>
+    <a href="#" class="AK-Cat-menu-item">History</a>
+    <a href="#" class="AK-Cat-menu-item">Biography</a>
+    <a href="#" class="AK-Cat-menu-item">Self-Help</a>
+</nav>
+
+<div class="AK-Cat-book-container">
+    <div class="AK-Cat-book-item">
+        <img src="{{ url_for('static', filename='images/book-2.png')}}" alt="Book Cover">
+        <h4>Book Title</h4>
+        <p>Author Name</p>
+        <p>$19.99</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="AK-Cat-book-item">
+        <img src="{{ url_for('static', filename='images/book-3.png')}}" alt="Book Cover">
+        <h4>Another Book</h4>
+        <p>Another Author</p>
+        <p>$12.99</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="AK-Cat-book-item">
+        <img src="{{ url_for('static', filename='images/book-4.png')}}" alt="Book Cover">
+        <h4>Third Book</h4>
+        <p>Third Author</p>
+        <p>$15.00</p>
+        <button>Add to Cart</button>
+    </div>
+       <div class="AK-Cat-book-item">
+        <img src="{{ url_for('static', filename='images/book-5.png')}}" alt="Book Cover">
+        <h4>Third Book</h4>
+        <p>Third Author</p>
+        <p>$15.00</p>
+        <button>Add to Cart</button>
+    </div>
+       <div class="AK-Cat-book-item">
+        <img src="{{ url_for('static', filename='images/book-6.png')}}" alt="Book Cover">
+        <h4>Third Book</h4>
+        <p>Third Author</p>
+        <p>$15.00</p>
+        <button>Add to Cart</button>
+    </div>
+       <div class="AK-Cat-book-item">
+        <img src="{{ url_for('static', filename='images/book-7.png')}}" alt="Book Cover">
+        <h4>Third Book</h4>
+        <p>Third Author</p>
+        <p>$15.00</p>
+        <button>Add to Cart</button>
+    </div>
+       <div class="AK-Cat-book-item">
+        <img src="{{ url_for('static', filename='images/book-8.png')}}" alt="Book Cover">
+        <h4>Third Book</h4>
+        <p>Third Author</p>
+        <p>$15.00</p>
+        <button>Add to Cart</button>
+    </div>
+       <div class="AK-Cat-book-item">
+        <img src="{{ url_for('static', filename='images/book-9.png')}}" alt="Book Cover">
+        <h4>Third Book</h4>
+        <p>Third Author</p>
+        <p>$15.00</p>
+        <button>Add to Cart</button>
+    </div>
+       <div class="AK-Cat-book-item">
+        <img src="{{ url_for('static', filename='images/book-10.png')}}" alt="Book Cover">
+        <h4>Third Book</h4>
+        <p>Third Author</p>
+        <p>$15.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <!-- Add more book items as needed -->
+</div>
+
+
+
+
+<footer class="AK-Cat-footer-main">
+    <p>&copy; 2024 BookMatch. All rights reserved.</p>
+</footer>
+
+
+
 {% endblock %}
